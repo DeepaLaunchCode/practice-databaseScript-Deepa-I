@@ -34,8 +34,8 @@ CREATE TABLE Orders (
     order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     quantity INT NOT NULL DEFAULT 1,
     total_amount DECIMAL(10,2) NOT NULL,
-    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id) ON DELETE CASCADE,
-    FOREIGN KEY (menu_id) REFERENCES Menu(menu_id) ON DELETE RESTRICT
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id) ,
+    FOREIGN KEY (menu_id) REFERENCES Menu(menu_id) 
 );
 
 -- Insert sample data into Customers
